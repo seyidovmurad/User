@@ -1,0 +1,170 @@
+﻿body {
+    margin: 0;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin: 0;
+    padding: 20px;
+    font-size: 1.3em;
+    color: #333;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #444;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1em;
+    color: #555;
+}
+
+p {
+    margin: 0;
+    color: #666;
+    font-size: .9em;
+    padding: 5px 0;
+}
+
+span {
+    color: #333;
+    padding-right: 5px;
+}
+
+hr {
+    height: 0;
+    border: none;
+    border-bottom: 1px solid #8d8c8c;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+nav {
+    text-align: center;
+    border-bottom: 1px solid #a7a7a7;
+}
+
+input[type=text], input[type=email] {
+    border: none;
+    border-bottom: 1px solid #7c7c7c;
+    outline: none;
+    font-size: 1.1em;
+    padding: 7px 0;
+    color: #333;
+}
+
+input[type=submit] {
+    border: none;
+    color: #fff;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: .9em;
+}
+
+input[type=file] {
+    display: none;
+}
+
+label {
+    color: #555;
+}
+
+main {
+    padding: 40px 160px;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.models {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart {
+    align-items: center;
+    width: 48%;
+    margin: 10px;
+    box-shadow: 2px 4px 10px 1px #c9c9c978;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cart-img {
+    padding: 20px;
+}
+
+    .cart-img > img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+.cart-action {
+    display: flex;
+    flex-direction: column;
+}
+
+    .cart-action > i {
+        padding: 5px 0;
+        color: #229422c9;
+    }
+
+        .cart-action > i:last-child {
+            color: #c30b0bd2;
+        }
+
+.type {
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    width: 60%;
+    box-shadow: 2px 4px 10px 1px #c9c9c978;
+    padding: 30px;
+    margin: 20px auto;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 50px;
+}
+
+input::placeholder {
+    color: #8d8c8c;
+}
+
+#img-upload {
+    cursor: pointer;
+    margin: 10px 0;
+    padding: 5px 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+
+
+@media only screen and (max-width: 1118px) {
+    .cart {
+        width: 100%;
+    }
+}

@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Models.Employee>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>User List Page</h1>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <div class="head">
+                <h3>Users</h3>
+                <a asp-action="Add"><i class="fas fa-plus"></i> Add</a>
+            </div>
+            <hr />
+        </div>
+        <div class="models">
+            @foreach (var emp in Model)
+                {
+            <div class="cart">
+                <div class="cart-img">
+                    <img src=@(emp.ImgUrl ?? "https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg") alt="profile_pic">
+                </div>
+                <div class="cart-body">
+                    <h2>@emp.Name @emp.Surname</h2>
+                    <p><span>Email:</span>@emp.Email</p>
+                    <p><span>Phone:</span>@emp.Phone</p>
+                </div>
+                <div class="cart-action">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <i class="fas fa-trash"></i>
+                </div>
+            </div>
+                }
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/ec9224e721.js" crossorigin="anonymous"></script>
+</body>
+</html>
