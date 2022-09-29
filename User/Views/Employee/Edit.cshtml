@@ -1,0 +1,41 @@
+﻿@model Models.Employee
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div >
+    <div class="head">
+        <h3>Edit User</h3>
+        <a asp-action="Index" asp-controller="Employee">Go Back</a>
+    </div>
+    <hr />
+</div>
+<div class="form">
+    <form asp-controller="Employee" asp-action="Edit">
+        <input asp-for="Id" type="hidden" />
+        <div class="form-input">
+            <label>Image Url</label>
+            <input asp-for="ImgUrl" placeholder="http://..." />
+        </div>
+
+        <div class="form-input">
+            <label>Name</label>
+            <input asp-for="Name" placeholder="Joe" />
+        </div>
+        <div class="form-input">
+            <label>Surname</label>
+            <input asp-for="Surname" placeholder="Doe" />
+        </div>
+        <div class="form-input">
+            <label>Email</label>
+            <input asp-for="Email" type="email" placeholder="joedoe@email.com" />
+        </div>
+        <div class="form-input">
+            <label>Phone</label>
+            <input asp-for="Phone" placeholder="+994 50 123 32 32" />
+        </div>
+        <div class="form-input">
+            <input type="submit" value="Save Changes" />
+        </div>
+    </form>
+</div>

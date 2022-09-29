@@ -1,81 +1,40 @@
 ﻿@model Models.Employee
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <h1>User List Page</h1>
-        </nav>
-    </header>
-    <main>
-        <div>
-            <h3>Add User</h3>
-            <hr />
-        </div>
-        <div class="form">
-            @*<div class="form-input">
-                <label>Image type</label>
-                <div>
-                    <span><input type="radio" id="url" name="type" onchange="changeType(false)" checked /> Url</span>
-                    <span><input type="radio" id="file" name="type" onchange="changeType(true)" /> File</span>
-                </div>
-            </div>*@
-            <form asp-controller="Employee" asp-action="Add">
-                <div class="form-input">
-                    <label >Image Url</label>
-                    <input asp-for="ImgUrl"  placeholder="http://..." />
-                </div>
 
-                <div class="form-input">
-                    <label>Name</label>
-                    <input asp-for="Name" placeholder="Joe" />
-                </div>
-                <div class="form-input">
-                    <label>Surname</label>
-                    <input asp-for="Surname"  placeholder="Doe" />
-                </div>
-                <div class="form-input">
-                    <label>Email</label>
-                    <input asp-for="Email" type="email" placeholder="joedoe@email.com" />
-                </div>
-                <div class="form-input">
-                    <label>Phone</label>
-                    <input asp-for="Phone" placeholder="+994 50 123 32 32" />
-                </div>
-                <div class="form-input">
-                    <input type="submit" value="Submit" />
-                </div>
-            </form>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <div class="head">
+        <h3>Add User</h3>
+        <a asp-action="Index">Go Back</a>
+    </div>
+    <hr />
+</div>
+<div class="form">
+    <form asp-controller="Employee" asp-action="Add">
+        <div class="form-input">
+            <label >Image Url</label>
+            <input asp-for="ImgUrl"  placeholder="http://..." />
         </div>
-    </main>
-    <script src="https://kit.fontawesome.com/ec9224e721.js" crossorigin="anonymous"></script>
-    @*<script>
-        function changeType(value) {
-                const img = document.getElementById("form-img")
-                if(value) {
-                    img.innerHTML = `<div class="form-input">
-                        <label >Image</label>
-                        <span onclick="chooseFile()" id="img-upload"><i class="fas fa-upload"></i> Choose image</span>
-                        <input asp-for="ImgUrl" id="img-file" type="file" name="image" />
-                    </div>`
-                }
-                else {
-                    img.innerHTML = `<div class="form-input">
-                        <label >Image Url</label>
-                        <input asp-for="ImgUrl" type="text" name="url" placeholder="http://..." />
-                    </div>`
-                }
-            }
 
-            function chooseFile() {
-                console.log("oooo")
-                document.getElementById("img-file").click();
-            }</script>*@
-</body>
-</html>
+        <div class="form-input">
+            <label>Name</label>
+            <input asp-for="Name" placeholder="Joe" />
+        </div>
+        <div class="form-input">
+            <label>Surname</label>
+            <input asp-for="Surname"  placeholder="Doe" />
+        </div>
+        <div class="form-input">
+            <label>Email</label>
+            <input asp-for="Email" type="email" placeholder="joedoe@email.com" />
+        </div>
+        <div class="form-input">
+            <label>Phone</label>
+            <input asp-for="Phone" placeholder="+994 50 123 32 32" />
+        </div>
+        <div class="form-input">
+            <input type="submit" value="Submit" />
+        </div>
+    </form>
+</div>

@@ -14,6 +14,7 @@ namespace User.Models
         public string Phone { get; set; }
 
         public string ImgUrl { get; set; }
+
        
     }
 }

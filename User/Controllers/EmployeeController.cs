@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using User.Data;
 using User.Models;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -13,10 +10,16 @@ namespace User.Controllers
 {
     public class EmployeeController : Controller
     {
-        // GET: /<controller>/
+        private readonly WorkDbContext _context;
+
+        public EmployeeController(WorkDbContext context)
+        {
+            _context = context;
+        }
+
         public IActionResult Index()
         {
-            var employees = JsonHandle.GetEmployee();
+            var employees = _context.Employees;
             return View(employees);
         }
 
@@ -27,12 +30,54 @@ namespace User.Controllers
             return View(employee);
         }
 
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var found = _context.Employees.Find(id);
+
+            if(found == null)
+                return Redirect("/");
+
+            _context.Employees.Remove(found);
+            _context.SaveChanges();
+            return Redirect("/");
+        }
+
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            var found = _context.Employees.Find(id);
+
+            if (found == null)
+                return Redirect("/");
+
+            return View(found);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Employee employee)
+        {
+            if (ModelState.IsValid)
+            {
+                
+                _context.Employees.Update(employee);
+                _context.SaveChanges();
+                return Redirect("/");
+            }
+            else
+            {
+                return View(employee);
+            }
+        }
+
         [HttpPost]
         public IActionResult Add(Employee employee)
         {
             if(ModelState.IsValid)
             {
-                JsonHandle.AddEmployee(employee);
+                _context.Employees.Add(employee);
+                _context.SaveChanges();
                 return Redirect("/");
             }
             else
@@ -41,7 +86,6 @@ namespace User.Controllers
             }
         }
     }
-
 
     public class JsonHandle
     {
@@ -52,11 +96,11 @@ namespace User.Controllers
             List<Employee> employees;
             using (StreamReader r = new StreamReader("data.json", Encoding.UTF8))
             {
-                   
+
                 string json = r.ReadToEnd();
                 try
                 {
-                    
+
                     employees = JsonSerializer.Deserialize<List<Employee>>(json);
                 }
                 catch
@@ -84,5 +128,7 @@ namespace User.Controllers
             }
         }
     }
+
+
 }
 
