@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/muradseyidov/Desktop/Asp_hw/2-18.08.2022/User/User/User.csproj": {}
+    "C:\\Users\\Murad\\source\\repos\\seyidovmurad\\User\\User\\User.csproj": {}
   },
   "projects": {
-    "/Users/muradseyidov/Desktop/Asp_hw/2-18.08.2022/User/User/User.csproj": {
+    "C:\\Users\\Murad\\source\\repos\\seyidovmurad\\User\\User\\User.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/muradseyidov/Desktop/Asp_hw/2-18.08.2022/User/User/User.csproj",
+        "projectUniqueName": "C:\\Users\\Murad\\source\\repos\\seyidovmurad\\User\\User\\User.csproj",
         "projectName": "User",
-        "projectPath": "/Users/muradseyidov/Desktop/Asp_hw/2-18.08.2022/User/User/User.csproj",
-        "packagesPath": "/Users/muradseyidov/.nuget/packages/",
-        "outputPath": "/Users/muradseyidov/Desktop/Asp_hw/2-18.08.2022/User/User/obj/",
+        "projectPath": "C:\\Users\\Murad\\source\\repos\\seyidovmurad\\User\\User\\User.csproj",
+        "packagesPath": "C:\\Users\\Murad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Murad\\source\\repos\\seyidovmurad\\User\\User\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/muradseyidov/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Murad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,13 +39,24 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -55,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.302/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

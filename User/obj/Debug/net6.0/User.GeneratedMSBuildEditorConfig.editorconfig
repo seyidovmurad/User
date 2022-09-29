@@ -8,21 +8,29 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = User
 build_property.RootNamespace = User
-build_property.ProjectDir = /Users/muradseyidov/Desktop/Asp_hw/2-18.08.2022/User/User/
+build_property.ProjectDir = C:\Users\Murad\source\repos\seyidovmurad\User\User\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/muradseyidov/Desktop/Asp_hw/2-18.08.2022/User/User
+build_property.MSBuildProjectDirectory = C:\Users\Murad\source\repos\seyidovmurad\User\User
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/muradseyidov/Desktop/Asp_hw/2-18.08.2022/User/User/Views/Employee/Add.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1wbG95ZWUvQWRkLmNzaHRtbA==
+[C:/Users/Murad/source/repos/seyidovmurad/User/User/Views/Employee/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/muradseyidov/Desktop/Asp_hw/2-18.08.2022/User/User/Views/Employee/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1wbG95ZWUvSW5kZXguY3NodG1s
+[C:/Users/Murad/source/repos/seyidovmurad/User/User/Views/Employee/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/muradseyidov/Desktop/Asp_hw/2-18.08.2022/User/User/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[C:/Users/Murad/source/repos/seyidovmurad/User/User/Views/Employee/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Murad/source/repos/seyidovmurad/User/User/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Murad/source/repos/seyidovmurad/User/User/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
